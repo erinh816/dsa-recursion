@@ -28,23 +28,37 @@ function find(arr, val) {
   if(arr.length===0) return false;
 
   return arr[0]===val || find(arr.slice(1),val)
-  // if(arr[0]!==val){
-  //   return find(arr.slice(1),val)
-  // }else{
-  //   return true
-  // }
 }
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
 
 function isPalindrome(str) {
+  let flippedStr = "";
 
+  function _flipString(str, i) {
+    if (i < 0) return;
+    flippedStr += str[i];
+    _flipString(str, i - 1);
+  }
+
+  _flipString(str, str.length - 1);
+
+  return flippedStr === str;
 }
 
 /** revString: return a copy of a string, but in reverse. */
 
 function revString(str) {
+  let flippedStr = "";
 
+  function _flipString(str, i) {
+    if (i < 0) return;
+    flippedStr += str[i];
+    _flipString(str, i - 1);
+  }
+
+  _flipString(str, str.length - 1);
+  return flippedStr;
 }
 
 /** findIndex: return the index of val in arr (or -1 if val is not present). */
