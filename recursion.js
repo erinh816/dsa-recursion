@@ -25,7 +25,14 @@ function everyOther(str) {
 /** find: return boolean depending on if val exists in array or not. */
 
 function find(arr, val) {
+  if(arr.length===0) return false;
 
+  return arr[0]===val || find(arr.slice(1),val)
+  // if(arr[0]!==val){
+  //   return find(arr.slice(1),val)
+  // }else{
+  //   return true
+  // }
 }
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
