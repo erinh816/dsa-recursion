@@ -9,7 +9,10 @@ function product(nums) {
 /** longest: return the length of the longest word in an array of words. */
 
 function longest(words) {
+  if(words.length===0)return 0;
 
+  let longest = words[0].length
+  
 }
 
 /** everyOther: return a string with every other letter. */
