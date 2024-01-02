@@ -65,6 +65,13 @@ function revString(str) {
 
 function findIndex(arr, val) {
 
+  function _findIndex(arr, val, i){
+    if (arr.length === i) return -1;
+    if (arr[i] === val) return i;
+    return _findIndex(arr, val, i+1);
+  }
+
+  return _findIndex(arr, val, 0);
 }
 
 /** gatherStrings: given an object, return an array of all of the string values. */
